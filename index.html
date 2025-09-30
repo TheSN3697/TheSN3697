@@ -97,22 +97,20 @@
 
     <!-- 1. Hero Section -->
     <section id="hero" class="py-20 md:py-32 text-center max-w-7xl mx-auto px-4">
-        <h1 class="text-5xl sm:text-8xl lg:text-9xl font-extrabold mb-4 neon-text">
+        <h1 class="text-5xl sm:text-8xl lg:text-9xl font-extrabold mb-8 neon-text">
             ERROR 404 Cyber Café
         </h1>
         
-        <!-- VISUALLY HIGHLIGHTED CTA BLOCK (Modified USP) -->
-        <div class="max-w-4xl mx-auto mb-10 pt-4 pb-8 border-y-2 border-cyan-700/50">
-            <!-- Simple green CTA text -->
-            <p class="text-4xl sm:text-5xl font-extrabold text-green-400 max-w-4xl mx-auto mb-3">
-                Stop Waiting. Start Clicking. Your Fastest Digital Fix is Here!
+        <!-- NEW JINGLE / TAGLINE -->
+        <div class="max-w-4xl mx-auto mb-10 pt-4 pb-8 border-y-2 border-green-700/50">
+            <p class="text-2xl sm:text-3xl font-extrabold text-green-400 max-w-4xl mx-auto mb-1">
+                🎵 Stop waiting, start clicking, your digital fix is near!
             </p>
-            <!-- NEW JINGLE / USP -->
-            <p class="text-xl sm:text-2xl text-cyan-300 font-bold max-w-3xl mx-auto">
-                Skip the Line, Start Online. Your Digital Services, Delivered Instantly.
+            <p class="text-2xl sm:text-3xl font-extrabold text-cyan-400 max-w-4xl mx-auto">
+                Skip the line, go online, instant services appear! 🎵
             </p>
         </div>
-        <!-- END HIGHLIGHTED CTA BLOCK -->
+        <!-- END JINGLE -->
         
         <!-- UPDATED: Super-Advanced Service Buttons for clearer navigation -->
         <div class="flex flex-wrap justify-center gap-4 mt-10">
@@ -189,7 +187,7 @@
                         Dedicated support for competitive exams, admissions, and document preparation.
                     </p>
                     <ul class="space-y-3 text-lg text-gray-300">
-                        <li class="flex items-start"><i data-lucide="keyboard" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>Typing of any Application (Professional and accurate)</li>
+                        <li class="flex items-start"><i data-lucide="keyboard" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>**Typing of any Application** (Professional and accurate)</li>
                         <li class="flex items-start"><i data-lucide="edit" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>Competitive Exam Applications (SSC, Railway, Bank, NET, etc.)</li>
                         <li class="flex items-start"><i data-lucide="layout-list" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>Admissions & University Registration Forms</li>
                         <li class="flex items-start"><i data-lucide="file-text" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>Resume/CV Digital Formatting & Preparation</li>
@@ -308,6 +306,22 @@
             
             <h2 class="text-3xl font-bold mb-4 text-cyan-400">Ready for Instant Digital Service?</h2>
 
+            <!-- NEW REFERRAL SECTION -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-green-400 mb-3">
+                    Get a FREE Service!
+                </h3>
+                <p class="text-lg text-gray-300 mb-6">
+                    Refer a friend to <b><i>Error 404 Cyber Café</b></i>, and once they complete their first service, you get one free service on your next task!
+                </p>
+                <button id="referButton"
+                    class="flex items-center space-x-2 px-8 py-3 mx-auto bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold rounded-lg transition duration-300 shadow-xl shadow-fuchsia-800/50 transform hover:scale-105">
+                    <i data-lucide="share-2" class="w-6 h-6"></i>
+                    <span class="text-xl">Refer & Earn Your Free Service</span>
+                </button>
+            </div>
+            <!-- END NEW REFERRAL SECTION -->
+
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mt-8">
                 <!-- WhatsApp/Contact (Primary CTA) -->
                 <!-- Changed icon to 'phone' + 'whatsapp' text for clarity -->
@@ -340,11 +354,38 @@
         </div>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Initialize Lucide Icons and Referral Logic -->
     <script>
+        // Function to create a short, unique code for tracking
+        function generateReferralCode() {
+            // Uses crypto.randomUUID and takes the first 8 characters
+            return crypto.randomUUID().substring(0, 8).toUpperCase();
+        }
+
+        function createReferralLink() {
+            const code = generateReferralCode();
+            
+            // --- UPDATED LINK HERE ---
+            const websiteLink = 'http://bit.ly/4gS7zFd'; 
+            
+            const shareText = encodeURIComponent(
+                `Hey! Check out Error 404 Cyber Café for hassle-free online services (Govt IDs, Bills, Exams). No physical visit needed!\n\nUse my code for priority service: ${code}\n\n${websiteLink}`
+            );
+            
+            const whatsappUrl = `https://wa.me/?text=${shareText}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
         window.onload = function() {
             lucide.createIcons();
+            
+            // Attach the referral function to the button
+            const referButton = document.getElementById('referButton');
+            if (referButton) {
+                referButton.addEventListener('click', createReferralLink);
+            }
         };
     </script>
 </body>
 </html>
+
