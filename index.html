@@ -1,393 +1,781 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Error 404 Cyber Café - Your Digital Pit Stop</title>
+
     <!-- Load Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Load Space Mono font for the tech/neon aesthetic -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <!-- Load Lucide Icons CDN for service visuals -->
+
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
+
         /* Base styling for the dark, tech theme */
+
         html { 
+
             scroll-behavior: smooth; /* Added for smoother UX (Convenience) */
+
         }
+
         body {
+
             font-family: 'Inter', sans-serif;
+
             background-color: #0d1117; /* Very dark background */
+
         }
+
         /* Custom neon effect for the heading (Enhanced visual and aesthetic) */
+
         .neon-text {
+
             /* Now using Space Mono for a digital, terminal-style look */
+
             font-family: 'Space Mono', monospace; 
+
             color: #0ff; /* Cyan/Electric Blue */
+
             /* Adjusted shadow for deeper, more authentic fuchsia/blue glow */
+
             text-shadow: 0 0 7px #0ff, 0 0 25px #0ff, 0 0 50px #ff00ff, 0 0 100px #ff00ff; /* Increased glow intensity */
+
             transition: all 0.3s ease-in-out;
+
         }
+
         /* Custom Green Neon Text for CTA */
+
         .neon-cta-text {
+
             font-family: 'Space Mono', monospace;
+
             color: #0f0; /* Green/Lime */
+
             text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px rgba(0, 255, 0, 0.7);
+
         }
+
         /* Subtle circuit board background pattern */
+
         .circuit-bg {
+
             background-image: radial-gradient(rgba(0, 255, 255, 0.08) 1px, transparent 1px), radial-gradient(rgba(240, 0, 240, 0.08) 1px, transparent 1px);
+
             background-size: 40px 40px;
+
             background-position: 0 0, 20px 20px;
+
         }
+
         /* Advanced Hover effect for service cards */
+
         .service-card {
+
             transition: all 0.5s ease;
+
             position: relative;
+
             overflow: hidden;
+
         }
+
         /* Pseudo-element for advanced visual glow on card hover */
+
         .service-card:before {
+
             content: '';
+
             position: absolute;
+
             top: -50%;
+
             left: -50%;
+
             width: 200%;
+
             height: 200%;
+
             background: rgba(255, 0, 255, 0.05);
+
             transition: all 0.5s ease;
+
             transform: rotate(45deg);
+
             opacity: 0;
+
         }
+
         .service-card:hover:before {
+
             opacity: 1;
+
         }
+
         .service-card:hover {
+
             border-color: #0ff; /* Cyan border on hover */
+
             box-shadow: 0 0 35px rgba(0, 255, 255, 0.4); /* Stronger cyan glow */
+
             transform: translateY(-8px); /* Deeper lift */
+
         }
+
     </style>
+
 </head>
+
 <body class="text-white circuit-bg min-h-screen">
 
+
+
     <!-- Header & Navigation (Advanced: Sticky header with full navigation) -->
+
     <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-2xl border-b border-gray-700/50">
+
         <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+
             <!-- Logo/Name -->
+
             <div class="text-2xl font-extrabold tracking-tight">
+
                 <span class="text-cyan-400">ERROR 404</span> <span class="text-fuchsia-400">Cyber Café</span>
+
             </div>
+
             
+
             <!-- Desktop Navigation (Convenience: Quick jumps) -->
+
             <nav class="hidden md:flex space-x-6 text-lg">
+
                 <a href="#services" class="text-gray-300 hover:text-cyan-400 transition duration-300">Services</a>
+
                 <a href="#process" class="text-gray-300 hover:text-fuchsia-400 transition duration-300">How It Works</a>
+
                 <a href="#contact" class="text-gray-300 hover:text-green-400 transition duration-300">Contact</a>
+
             </nav>
 
+
+
             <!-- Contact Button (Enhanced visual and shadows) -->
+
             <a href="https://wa.me/919332352803" target="_blank"
+
                class="px-4 py-2 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold rounded-lg duration-300 shadow-lg shadow-fuchsia-800/80 hover:shadow-fuchsia-600/100 flex items-center space-x-2">
+
                 <i data-lucide="message-square" class="w-5 h-5"></i>
+
                 <span class="hidden sm:inline">Start Service</span>
+
             </a>
+
         </div>
+
     </header>
 
+
+
     <!-- 1. Hero Section -->
+
     <section id="hero" class="py-20 md:py-32 text-center max-w-7xl mx-auto px-4">
+
         <h1 class="text-5xl sm:text-8xl lg:text-9xl font-extrabold mb-8 neon-text">
+
             ERROR 404 Cyber Café
+
         </h1>
+
         
+
         <!-- NEW JINGLE / TAGLINE -->
+
         <div class="max-w-4xl mx-auto mb-10 pt-4 pb-8 border-y-2 border-green-700/50">
+
             <p class="text-2xl sm:text-3xl font-extrabold text-green-400 max-w-4xl mx-auto mb-1">
+
                 🎵 Stop waiting, start clicking, your digital fix is near!
+
             </p>
+
             <p class="text-2xl sm:text-3xl font-extrabold text-cyan-400 max-w-4xl mx-auto">
+
                 Skip the line, go online, instant services appear! 🎵
+
             </p>
+
         </div>
+
         <!-- END JINGLE -->
+
         
+
         <!-- UPDATED: Super-Advanced Service Buttons for clearer navigation -->
+
         <div class="flex flex-wrap justify-center gap-4 mt-10">
+
             <!-- Button 1: Government & Identity -->
+
             <a href="#govt-identity"
+
                class="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-bold rounded-xl transition duration-300 shadow-lg shadow-cyan-800/80 hover:shadow-cyan-600/100 transform hover:scale-[1.05]">
+
                 <i data-lucide="shield-check" class="w-5 h-5"></i>
+
                 <span>Govt. ID & Passport</span>
+
             </a>
+
             <!-- Button 2: Finance & Utility -->
+
             <a href="#finance-utility"
+
                class="inline-flex items-center space-x-2 px-6 py-3 bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold rounded-xl transition duration-300 shadow-lg shadow-fuchsia-800/80 hover:shadow-fuchsia-600/100 transform hover:scale-[1.05]">
+
                 <i data-lucide="receipt-text" class="w-5 h-5"></i>
+
                 <span>Finance & Utility Payments</span>
+
             </a>
+
             <!-- Button 3: Career & Education -->
+
             <a href="#career-education"
+
                class="inline-flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition duration-300 shadow-lg shadow-green-800/80 hover:shadow-green-600/100 transform hover:scale-[1.05]">
+
                 <i data-lucide="book-open-check" class="w-5 h-5"></i>
+
                 <span>Career & Exam Filing</span>
+
             </a>
+
         </div>
+
     </section>
+
+
 
     <!-- 2. Services Offered (Enriched 3-Column Grid for all services) -->
+
     <section id="services" class="py-16 bg-gray-800/50 border-y border-cyan-700/50">
+
         <div class="max-w-7xl mx-auto px-4">
+
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-cyan-400">
+
                 Full Digital Service Matrix
+
             </h2>
 
+
+
             <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+
                 
+
                 <!-- Card 1: Govt. ID, Documentation & Passport Services (Enriched) -->
+
                 <div id="govt-identity" class="service-card p-6 bg-gray-900/70 rounded-2xl shadow-2xl border border-cyan-500/30">
+
                     <h3 class="text-2xl font-semibold mb-6 text-fuchsia-400 flex items-center">
+
                         <i data-lucide="shield-check" class="mr-3 w-6 h-6"></i> Govt. ID & Documentation
+
                     </h3>
+
                     <p class="text-lg text-cyan-200 mb-4 font-bold">
+
                         Hassle-free processing for all your essential government identification and documentation.
+
                     </p>
+
                     <ul class="space-y-3 text-lg text-gray-300">
+
                         <li class="flex items-start"><i data-lucide="credit-card" class="w-5 h-5 mr-3 mt-1 text-fuchsia-400 flex-shrink-0"></i>PAN Card (New / Correction / Reprint)</li>
+
                         <li class="flex items-start"><i data-lucide="user-check" class="w-5 h-5 mr-3 mt-1 text-fuchsia-400 flex-shrink-0"></i>Voter ID Card (New / Correction / Reprint)</li>
+
                         <li class="flex items-start"><i data-lucide="briefcase" class="w-5 h-5 mr-3 mt-1 text-fuchsia-400 flex-shrink-0"></i>Income, Domicile & Other Certificates</li>
+
                         <li class="flex items-start"><i data-lucide="globe" class="w-5 h-5 mr-3 mt-1 text-fuchsia-400 flex-shrink-0"></i>Passport & Visa Application/Renewal Forms</li>
+
                         <li class="flex items-start"><i data-lucide="lock" class="w-5 h-5 mr-3 mt-1 text-fuchsia-400 flex-shrink-0"></i>Aadhaar/DigiLocker Assistance</li>
+
                     </ul>
+
                 </div>
+
+
 
                 <!-- Card 2: Finance, Bills & Payments (Enriched) -->
+
                 <div id="finance-utility" class="service-card p-6 bg-gray-900/70 rounded-2xl shadow-2xl border border-fuchsia-500/30">
+
                     <h3 class="text-2xl font-semibold mb-6 text-cyan-400 flex items-center">
+
                         <i data-lucide="receipt-text" class="mr-3 w-6 h-6"></i> Finance, Bills & Payments
+
                     </h3>
+
                     <p class="text-lg text-fuchsia-200 mb-4 font-bold">
+
                         Instant transactions, bill management, and booking services done right.
+
                     </p>
+
                     <ul class="space-y-3 text-lg text-gray-300">
+
                         <li class="flex items-start"><i data-lucide="bus" class="w-5 h-5 mr-3 mt-1 text-cyan-400 flex-shrink-0"></i>SBSTC / Train / Flight Booking</li>
+
                         <li class="flex items-start"><i data-lucide="smartphone" class="w-5 h-5 mr-3 mt-1 text-cyan-400 flex-shrink-0"></i>Mobile / DTH Recharge (All Operators)</li>
+
                         <li class="flex items-start"><i data-lucide="zap" class="w-5 h-5 mr-3 mt-1 text-cyan-400 flex-shrink-0"></i>Electricity, Gas, Water & Insurance Bill Payments</li>
+
                         <li class="flex items-start"><i data-lucide="refresh-cw" class="w-5 h-5 mr-3 mt-1 text-cyan-400 flex-shrink-0"></i>Secure Money Transfer Assistance</li>
+
                         <li class="flex items-start"><i data-lucide="banknote" class="w-5 h-5 mr-3 mt-1 text-cyan-400 flex-shrink-0"></i>Bank KYC / Account Opening Form Filling</li>
+
                     </ul>
+
                 </div>
+
                 
+
                 <!-- Card 3: Career & Education Applications (UPDATED) -->
+
                 <div id="career-education" class="service-card p-6 bg-gray-900/70 rounded-2xl shadow-2xl border border-green-500/30">
+
                     <h3 class="text-2xl font-semibold mb-6 text-fuchsia-400 flex items-center">
+
                         <i data-lucide="book-open-check" class="mr-3 w-6 h-6"></i> Career & Education Filing
+
                     </h3>
+
                     <p class="text-lg text-green-200 mb-4 font-bold">
+
                         Dedicated support for competitive exams, admissions, and document preparation.
+
                     </p>
+
                     <ul class="space-y-3 text-lg text-gray-300">
+
                         <li class="flex items-start"><i data-lucide="keyboard" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>Typing of any Application(Professional and accurate)</li>
+
                         <li class="flex items-start"><i data-lucide="edit" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>Competitive Exam Applications (SSC, Railway, Bank, NET, etc.)</li>
+
                         <li class="flex items-start"><i data-lucide="layout-list" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>Admissions & University Registration Forms</li>
+
                         <li class="flex items-start"><i data-lucide="file-text" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>Resume/CV Digital Formatting & Preparation</li>
+
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- 3. How It Works & Key Points (Advanced: 3-Column layout for clarity) -->
+
     <section id="process" class="py-16 max-w-7xl mx-auto px-4">
+
         <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-fuchsia-400">
+
             Secure, Simple, Digital Process
+
         </h2>
+
         
+
         <!-- NEW 3-COLUMN LAYOUT -->
+
         <div class="grid lg:grid-cols-3 gap-10">
+
             
+
             <!-- Column 1: Quick Start Workflow (3 Steps) -->
+
             <div class="lg:col-span-1 space-y-8">
+
                 <h3 class="text-2xl font-semibold text-cyan-400 mb-6 flex items-center"><i data-lucide="workflow" class="mr-3"></i> Quick Start Workflow:</h3>
+
                 <div class="grid sm:grid-cols-1 gap-6"> 
+
                     <!-- Step 1 (Advanced hover) -->
+
                     <div class="p-5 bg-gray-900/70 rounded-xl border border-gray-700 transition duration-300 hover:border-cyan-500 transform hover:scale-[1.02]">
+
                         <i data-lucide="send" class="text-cyan-400 w-8 h-8 mb-2"></i>
+
                         <p class="font-semibold text-lg mb-1">1. Query & Details</p>
+
                         <p class="text-gray-400 text-sm">Reach out via WhatsApp with your specific need and details.</p>
+
                     </div>
+
                     <!-- Step 2 (Advanced hover) -->
+
                     <div class="p-5 bg-gray-900/70 rounded-xl border border-gray-700 transition duration-300 hover:border-fuchsia-500 transform hover:scale-[1.02]">
+
                         <i data-lucide="lock" class="text-fuchsia-400 w-8 h-8 mb-2"></i>
+
                         <p class="font-semibold text-lg mb-1">2. Secure Submission</p>
+
                         <p class="text-gray-400 text-sm">We process the form/request securely on your behalf.</p>
+
                     </div>
+
                     <!-- Step 3 (Advanced hover) -->
+
                     <div class="p-5 bg-gray-900/70 rounded-xl border border-gray-700 transition duration-300 hover:border-cyan-500 transform hover:scale-[1.02]">
+
                         <i data-lucide="check-check" class="text-cyan-400 w-8 h-8 mb-2"></i>
+
                         <p class="font-semibold text-lg mb-1">3. Payment & Delivery</p>
+
                         <p class="text-gray-400 text-sm">Pay via UPI and receive the completed soft copy digital file.</p>
+
                     </div>
+
                 </div>
+
             </div>
+
+
 
             <!-- Column 2: WE KEEP PROMISE (New, dedicated card for trust) -->
+
             <div class="lg:col-span-1 bg-gray-900/70 p-6 rounded-2xl shadow-xl border border-cyan-700/50">
+
                 <h3 class="text-2xl font-semibold text-cyan-400 mb-6 flex items-center"><i data-lucide="award" class="mr-3"></i> We Keep Promise</h3>
+
                 <div class="space-y-4">
+
                     
+
                     <!-- 1. Your Privacy Is Safe -->
+
                     <div class="flex items-center p-3 bg-gray-800 rounded-lg border-l-4 border-fuchsia-500">
+
                         <i data-lucide="shield-lock" class="w-6 h-6 mr-3 text-fuchsia-400 flex-shrink-0"></i>
+
                         <div>
+
                             <span class="font-bold text-white">Data Security:</span> 
+
                             <span class="text-gray-300">Your privacy is safe with us. Confidentiality is our priority.</span>
+
                         </div>
+
                     </div>
+
+
 
                     <!-- 2. 100% online process with transparency -->
+
                     <div class="flex items-center p-3 bg-gray-800 rounded-lg border-l-4 border-green-500">
+
                         <i data-lucide="layers-3" class="w-6 h-6 mr-3 text-green-400 flex-shrink-0"></i>
+
                         <div>
+
                             <span class="font-bold text-white">Transparency:</span> 
+
                             <span class="text-gray-300">100% online process with full transparency and security.</span>
+
                         </div>
+
                     </div>
+
+
 
                     <!-- 3. No need to present physically -->
+
                     <div class="flex items-center p-3 bg-gray-800 rounded-lg border-l-4 border-cyan-500">
+
                         <i data-lucide="monitor" class="w-6 h-6 mr-3 text-cyan-400 flex-shrink-0"></i>
+
                         <div>
+
                             <span class="font-bold text-white">Zero Visit Required:</span> 
+
                             <span class="text-gray-300">Complete your task without needing to be present physically.</span>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
+
 
             <!-- Column 3: Operational Details (Operational Key Points) -->
+
             <div class="lg:col-span-1 bg-gray-900/70 p-6 rounded-2xl shadow-xl border border-fuchsia-700/50">
+
                 <h3 class="text-2xl font-semibold text-fuchsia-400 mb-6 flex items-center"><i data-lucide="info" class="mr-3"></i> Operational Details</h3>
+
                 <div class="space-y-4">
+
                     
+
                     <!-- Payment Method -->
+
                     <div class="flex items-center p-3 bg-gray-800 rounded-lg border-l-4 border-green-500">
+
                         <i data-lucide="credit-card" class="w-6 h-6 mr-3 text-green-400 flex-shrink-0"></i>
+
                         <div>
+
                             <span class="font-bold text-white">Payment Method:</span> 
+
                             <span class="text-gray-300">UPI payments only (details shared upon confirmation).</span>
+
                         </div>
+
                     </div>
+
                     <!-- Base Charge -->
+
                     <div class="flex items-center p-3 bg-gray-800 rounded-lg border-l-4 border-cyan-500">
+
                         <i data-lucide="tag" class="w-6 h-6 mr-3 text-cyan-400 flex-shrink-0"></i>
+
                         <div>
+
                             <span class="font-bold text-white">Base Charge:</span> 
+
                             <span class="text-gray-300">Minimal ₹10 service fee (charges vary for complex/live services).</span>
+
                         </div>
+
                     </div>
+
                     <!-- Delivery Format -->
+
                     <div class="flex items-center p-3 bg-gray-800 rounded-lg border-l-4 border-fuchsia-500">
+
                         <i data-lucide="hard-drive" class="w-6 h-6 mr-3 text-fuchsia-400 flex-shrink-0"></i>
+
                         <div>
+
                             <span class="font-bold text-white">Delivery Format:</span> 
+
                             <span class="text-gray-300">Final delivery is always a soft copy (Digital File/PDF).</span>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
         <!-- END NEW 3-COLUMN LAYOUT -->
+
     </section>
 
+
+
     <!-- 4. Contact & Footer -->
+
     <footer id="contact" class="py-12 bg-gray-900/90 border-t border-fuchsia-700/50">
+
         <div class="max-w-7xl mx-auto px-4 text-center">
+
             
+
             <h2 class="text-3xl font-bold mb-4 text-cyan-400">Ready for Instant Digital Service?</h2>
 
+
+
             <!-- NEW REFERRAL SECTION -->
+
             <div class="mb-8">
+
                 <h3 class="text-2xl font-bold text-green-400 mb-3">
+
                     Get a FREE Service!
+
                 </h3>
+
                 <p class="text-lg text-gray-300 mb-6">
+
                     Refer a friend to <b><i>Error 404 Cyber Café</b></i>, and once they complete their first service, you get one free service on your next task!
+
                 </p>
+
                 <button id="referButton"
+
                     class="flex items-center space-x-2 px-8 py-3 mx-auto bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold rounded-lg transition duration-300 shadow-xl shadow-fuchsia-800/50 transform hover:scale-105">
+
                     <i data-lucide="share-2" class="w-6 h-6"></i>
+
                     <span class="text-xl">Refer & Earn Your Free Service</span>
+
                 </button>
+
             </div>
+
             <!-- END NEW REFERRAL SECTION -->
 
+
+
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mt-8">
+
                 <!-- WhatsApp/Contact (Primary CTA) -->
+
                 <!-- Changed icon to 'phone' + 'whatsapp' text for clarity -->
+
                 <a href="https://wa.me/919332352803" target="_blank"
+
                    class="flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition duration-300 shadow-xl shadow-green-800/50 transform hover:scale-105">
+
                     <i data-lucide="phone" class="w-6 h-6"></i>
+
                     <span class="text-xl">+91 9332352803 (WhatsApp/Call)</span>
+
                 </a>
+
                 
+
                 <!-- Telegram Contact -->
+
                 <!-- Changed icon to 'send' (standard Telegram icon replacement) -->
+
                 <a href="https://t.me/error404cafe" target="_blank"
+
                    class="flex items-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition duration-300 shadow-xl shadow-blue-800/50 transform hover:scale-105">
+
                     <i data-lucide="send" class="w-6 h-6"></i>
+
                     <span class="text-xl">@error404cafe (Telegram)</span>
+
                 </a>
+
                 
+
                 <!-- Email (Secondary CTA) -->
+
                 <a href="mailto:soumyadeep3697@gmail.com"
+
                    class="flex items-center space-x-2 px-6 py-3 border border-fuchsia-600 text-fuchsia-400 hover:bg-fuchsia-900/50 rounded-lg transition duration-300 transform hover:scale-105">
+
                     <i data-lucide="mail" class="w-6 h-6"></i>
+
                     <span class="text-lg">soumyadeep3697@gmail.com</span>
+
                 </a>
+
             </div>
 
+
+
             <!-- Refined Footer Line -->
+
             <p class="text-base text-gray-400 mt-12">
+
                 © 2025 Error 404 Cyber Café. All rights reserved. | Remote Digital Services Made Easy.| An Initiative by Dynamic Growth
+
             </p>
+
         </div>
+
     </footer>
 
+
+
     <!-- Initialize Lucide Icons and Referral Logic -->
+
     <script>
+
         // Function to create a short, unique code for tracking
+
         function generateReferralCode() {
+
             // Uses crypto.randomUUID and takes the first 8 characters
+
             return crypto.randomUUID().substring(0, 8).toUpperCase();
+
         }
+
+
 
         function createReferralLink() {
+
             const code = generateReferralCode();
+
             
+
             // --- UPDATED LINK HERE ---
+
             const websiteLink = 'http://bit.ly/4gS7zFd'; 
+
             
+
             const shareText = encodeURIComponent(
+
                 `Hey! Check out Error 404 Cyber Café for hassle-free online services (Govt IDs, Bills, Exams). No physical visit needed!\n\nUse my code for priority service: ${code}\n\n${websiteLink}`
+
             );
+
             
+
             const whatsappUrl = `https://wa.me/?text=${shareText}`;
+
             window.open(whatsappUrl, '_blank');
+
         }
 
-        window.onload = function() {
-            lucide.createIcons();
-            
-            // Attach the referral function to the button
-            const referButton = document.getElementById('referButton');
-            if (referButton) {
-                referButton.addEventListener('click', createReferralLink);
-            }
-        };
-    </script>
-</body>
-</html>
 
+
+        window.onload = function() {
+
+            lucide.createIcons();
+
+            
+
+            // Attach the referral function to the button
+
+            const referButton = document.getElementById('referButton');
+
+            if (referButton) {
+
+                referButton.addEventListener('click', createReferralLink);
+
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>
 
 
